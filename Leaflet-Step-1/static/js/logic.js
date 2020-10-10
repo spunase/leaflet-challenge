@@ -48,7 +48,7 @@ d3.json(queryUrl, function(data) {
         }
       }
 
-      // set radiuss from magnitude
+      // set radius from magnitude
     function getRadius(magnitude) {
         if (magnitude === 0) {
           return 1;
@@ -58,11 +58,11 @@ d3.json(queryUrl, function(data) {
       }
        // GeoJSON layer
     L.geoJson(data, {
-        // Maken cricles
+        // Make circles
         pointToLayer: function(feature, latlng) {
           return L.circleMarker(latlng);
         },
-        // cirecle style
+        // circles style
         style: styleInfo,
         // popup for each marker
         onEachFeature: function(feature, layer) {
