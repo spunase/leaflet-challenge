@@ -9,7 +9,7 @@ var map = L.map("map", {
   L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
-    id: "mapbox/streets-v11",
+    id: "light-v10",
     accessToken: "pk.eyJ1Ijoic3B1bmFzZSIsImEiOiJja2ZxNTA0dXkwM2QwMzJwdzduM2FwdmdsIn0.CsKrV-lkWUzXWOTt4Wd6kg"
   }).addTo(map);
 
