@@ -10,7 +10,8 @@ var map = L.map("map", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "light-v10",
-    accessToken: "pk.eyJ1Ijoic3B1bmFzZSIsImEiOiJja2ZxNTA0dXkwM2QwMzJwdzduM2FwdmdsIn0.CsKrV-lkWUzXWOTt4Wd6kg"
+// put your api key here
+    accessToken: "api_key"
   }).addTo(map);
 
     // Store our API endpoint
@@ -30,7 +31,7 @@ d3.json(queryUrl, function(data) {
       };
     }
 
-    // set different color from magnitude
+    // set different color for magnitude
     function getColor(magnitude) {
         switch (true) {
         case magnitude > 5:
@@ -48,7 +49,7 @@ d3.json(queryUrl, function(data) {
         }
       }
 
-      // set radius from magnitude
+    // set radius from magnitude
     function getRadius(magnitude) {
         if (magnitude === 0) {
           return 1;
@@ -56,7 +57,8 @@ d3.json(queryUrl, function(data) {
     
         return magnitude * 4;
       }
-       // GeoJSON layer
+
+    // GeoJSON layer
     L.geoJson(data, {
         // Make circles
         pointToLayer: function(feature, latlng) {
